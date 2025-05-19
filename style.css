@@ -1,67 +1,269 @@
-/* ESTILO GERAL   */
-*{
-margin: 0;
-padding: 0;
-box-sizing: #234450;
-font-family: 'Poppins', sans-serif;
+/* ======================== */
+/* ESTILO GERAL             */
+/* ======================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-
-body{
+body {
     background-color: blanchedalmond;
-height: 100vh;
+    height: 100vh;
 }
 
-.interface{
-max-width: 1480px;
-margin: 0 auto;
+.interface {
+    max-width: 1480px;
+    margin: 0 auto;
 }
 
-/* ESTILO DO CABEÇARIO */
-header{
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 90px;
+}
+
+/* ======================== */
+/* BOTÕES PADRÃO            */
+/* ======================== */
+.btn-contato button,
+.linkedin-button a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff08;
+    color: black;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.btn-contato button:hover,
+.linkedin-button a:hover {
+    box-shadow: 0px 0px 8px #27802b;
+    transform: scale(1.05);
+}
+
+.linkedin-button img {
+    width: 42px;
+    height: 42px;
+    vertical-align: middle;
+}
+
+/* ======================== /
+/ TÍTULOS /
+/ ======================== */
+h2.Titulo {
+    columns: fff;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.Titulo span {
+    color: #00ff08;
+}
+
+/* ======================== /
+/ CABEÇALHO /
+/ ======================== */
+header {
     padding: 40px 4%;
 }
 
 header > .interface {
     display: flex;
     align-items: center;
-    justify-content: space-between
-}
-header a{
-    color :#5c5c5c;
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s;
+    justify-content: space-between;
 }
 
-header a:hover{
-    color:#fff;
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+header a:hover {
+    color: #27802b;
     transform: scale(1.05);
 }
 
-header nav ul{
+header nav ul {
     list-style-type: none;
 }
 
-header nav ul{
-    list-style-type: none;
-}
-
-header nav ul li{
+header nav ul li {
     display: inline-block;
     padding: 0 40px;
 }
 
-header .btn-contato button{
-padding: 10px 40px;
-font-size: 18px;
-font-weight: 600;
-background-color: #00ff08;
-border: 0;
-border-radius: 30px;
-cursor:pointer;
+/* ======================== /
+/ TOPO DO SITE /
+/ ======================== */
+section.topo-do-site {
+    padding: 40px 4%;
 }
 
-header .btn-contato button:houver{
-    box-shadow: 0px 0px 8px #234450;
+.topo-do-site h1 {
+    color: black;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site h1 span {
+    color: #00ff08;
+}
+
+.topo-do-site p {
+    color: black;
+    margin: 40px 0;
+}
+
+.img-topo-site {
+    width: 400px;
+    height: auto;
+}
+
+.img-topo-site img {
+    width: 200%;
+    border-radius: 20px;
+    position: relative;
+    animation: flutuacao 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuacao {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* ======================== /
+/ ESPECIALIDADES /
+/ ======================== */
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: #030303;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #000000;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #000000c0;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 70px;
+    color: bisque;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ======================== /
+/ PARTICULAS DO SITE /
+/ ======================== */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+}
+
+/* ======================== /
+/ CURSOR DO MOUSE /
+/ ======================== */
+.cursor-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  background-image: url('images/cursor-luz.png'); /* caminho da sua imagem */
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+}
+
+/* ======================== /
+/ INTRODUÇÃO ANIMADA /
+/ ======================== */
+.apresentacao {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  z-index: 10;
+  max-width: 600px;
+}
+
+.apresentacao .hello {
+  font-size: 20px;
+  color: #000;
+  margin: 0 0 10px;
+}
+
+.apresentacao .name {
+  font-size: 50px;
+  font-weight: bold;
+  color: #000;
+  margin: 0 0 15px;
+}
+
+.apresentacao .job {
+  font-size: 32px;
+  font-weight: 400;
+  color: #00ff08;
+}
+
+.cd-words-wrapper {
+ display: inline-block;
+  position: relative;
+  width: 300px; /* ou maior, dependendo do maior texto */
+  height: 40px;  
+  overflow: hidden;
+}
+
+.cd-words-wrapper b {
+ position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  white-space: nowrap; /* impede quebra de linha */
+  transition: opacity 0.5s ease-in-out;
+  font-weight: bold;
+  color: #00ff08;
+ 
+}
+
+.cd-words-wrapper b.is-visible {
+  position: relative;
+  opacity: 1;
 }
